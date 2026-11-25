@@ -10,6 +10,7 @@ class Report extends Model
     protected $fillable = [
         'user_id', 'category_id', 'title', 
         'description', 'location', 'status',
+        'photo'
     ];
 
     public function user(): BelongsTo{
@@ -19,4 +20,6 @@ class Report extends Model
     public function category():BelongsTo{
         return $this->BelongsTo(Category::class);
     }
+
+   
 }

@@ -4,7 +4,7 @@
 <div class="container py-4">
     <div class="d-flex justify-content-between mb3">
         <h2>Daftar Kategori</h2>
-        <a href="{{ route('categories.create')}}" class="btn btn-primaru"> Tambah Kategori
+        <a href="{{ route('categories.create')}}" class="btn btn-primary"> Tambah Kategori
         </a>
     </div>
 

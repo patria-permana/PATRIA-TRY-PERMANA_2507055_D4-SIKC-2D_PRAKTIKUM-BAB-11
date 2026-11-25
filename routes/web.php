@@ -12,7 +12,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
 Route::get('/laporan', [HomeController::class, 'laporan'])->name('laporan');
 
-Route::get('/reports/{id}', [ReportController::class, 'show'])->name('reports.show');
+// Route::get('/reports/{id}', [ReportController::class, 'show'])->name('reports.show');
 
 Route::resource('categories', CategoryController::class);
 
@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 
 // Fitur admin dan user
 Route::middleware(['auth', 'role:admin,user'])->group(function () {
-    Route::resource('reports', ReportController::class)->except(['show']);
+    Route::resource('reports', ReportController::class);
 });
 
 // Khusus admin

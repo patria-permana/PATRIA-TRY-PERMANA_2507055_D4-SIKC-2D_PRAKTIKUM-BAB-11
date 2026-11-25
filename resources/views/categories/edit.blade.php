@@ -5,7 +5,8 @@
     <h2>Edit Kategori</h2>
 
     <form action="{{ route('categories.update', $category->id) }}" method="POST" >
-        @csrf @method('PUT')
+        @csrf 
+        @method('PUT')
 
         <div class="mb-3">
             <label for="" class="form-label">Nama Kategori</label>
